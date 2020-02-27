@@ -393,7 +393,7 @@ h2.title {
     display: block;
     width: 100%;
     max-width: 495px;
-    height: autoSS;
+    height: auto;
 }
 
 .feature__info--right {
@@ -581,6 +581,10 @@ section.testimonios {
         line-height: 40px;
     }
 
+    .img-feature-big {
+        width: 50%;
+    }
+
     .footer__wrapper {
         height: 300px;
     }
@@ -665,6 +669,7 @@ section.testimonios {
 
     .img-feature-big {
         margin-top: 30px;
+        width: 100%;
     }
     .feature__info--left {
         padding-right: 0%;
