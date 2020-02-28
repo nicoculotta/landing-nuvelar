@@ -1,0 +1,2 @@
+En los html hay codigo JS inline. La variable debugMode hay que setearla en false para hacer pruebas locales y durante el desarrollo.
+Es para evitar que google analytics cuente visitas y acciones de conversion
