@@ -7,16 +7,56 @@
     <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico"/>
     <title>Nuvelar - Landing Page</title>
     <link rel="stylesheet" href="main.css">
+    
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41919770-3"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
+    <script>
+        debugMode = false;
+        </script>
 
+        <script>
+            if(!debugMode){
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-41919770-3');
+            }else{
+                console.log("En modo debug");
+            }
+        </script>
+          <script>
+        function sendlead(){
+
+            if(!debugMode){
+                      gtag('event','form_cl', {
+                        'event_category': 'lead',
+                        'event_label': '<landing>',
+                      });
+                    }else{
+                        console.log("Estoy en modo debug!");
+                    }
+             Email.send({
+            SecureToken : "c6e7ebeb-9e9e-42b1-84b3-cec96ccea775",
+            To : 'contacto@nuvelar.com',
+            From : "contacto@nuvelar.com",
+            Subject : "Nuevo Lead - Landing Chile",
+            Body : "Nuevo lead - Landing Chile. Email: " + document.getElementById("email").value+", Nombre: "+document.getElementById("name").value
+        }).then(
+          //message => alert(message)
+        );
+        }
+        </script>
     <header>
         <nav>
             <img class="brand" src="images/logo.svg" alt="Logo">
@@ -25,7 +65,7 @@
                 <a href="#feature">Servicios</a>
                 <a href="#testimonios">Testimonios</a>
             </div>
-            <div class="btn-call"><a href="callto://+541159842697">+54 11 5984 2697</a></div>
+            <div class="btn-call"><a href="callto://+56232109755">+56 23 2109 755</a></div>
         </nav>
         <div class="hero__section">
             <div class="hero__titles">
@@ -36,7 +76,7 @@
                 <p>Solicita una demo personalizada</p>
                 <input type="text" name="user_name" id="name" placeholder="Name">
                 <input type="email" name="user_email" id="email" placeholder="Email" autocomplete="off">
-                <button type="submit" class="btn-form">¡Quiero mi prueba!</button>
+                <button id="button" type="submit" class="btn-form" onclick="sendlead()">¡Quiero mi prueba!</button>
             </form>
         </div>
 
@@ -51,7 +91,7 @@
     </header>
     <section class="clients">
         <p class="clients__title">
-            ¡Sumate a estas empresas que ya confían en nosotros!
+            ¡Sumate a estas empresas que ya trabajan con nosotros!
         </p>
         <div class="clients__logos">
             <img src="images/provincianet-gris.png" alt="provincianet">
@@ -75,7 +115,7 @@
             <div class="card active">
                 <img src="images/maps.svg" alt="icon maps" class="img-feature">
                 <h4 class="card__title">Programa tus publicaciones</h4>
-                <p>Orgniza fácilmente cúando y dónde se mostrarán tus contenidos</p>
+                <p>Organiza fácilmente cúando y dónde se mostrarán tus contenidos</p>
             </div>
             <div class="card">
                 <img src="images/return.svg" alt="icon_return" class="img-feature">
@@ -97,7 +137,7 @@
             <div class="feature__info--left">
                 <p class="subtitle">Desarrollo y asesoramiento</p>
                 <h2 class="title">Desarrollo de proyectos a medida</h2>
-                <p>Somos el equipo de desarrollo que necesitas para tus proyectos a medida. Tenemos una amplia trayectoria y podemos ayudarte a crear soluciones tecnológicas a la medida de tus necesidades.</p>
+                <p>Somos el equipo de desarrollo que necesitas para ese proyecto que quieres realizar desde hace mucho tiempo. Tenemos una amplia trayectoria y podemos ayudarte a crear soluciones tecnológicas a la medida de tus necesidades.</p>
             </div>
             <img src="images/desarrollo.png" class="img-feature-big">
         </div>
@@ -108,7 +148,7 @@
             <h2 class="testimonios__title">¿Qué dicen nuestros clientes?</h2>
             <div class="testimonios__cards">    
                 <div class="card">
-                    <p>Vi una evolución importante en la plata y es por eso que seguimos eligiéndolos. Estamos muy felices de usar Nuvelar.</p>
+                    <p>Vi una evolución importante en la plataforma y es por eso que seguimos eligiéndolos. Estamos muy felices de usar Nuvelar.</p>
                     <div class="card__footer">
                         <img src="images/MartinFrankel.png" alt="" class="img-user">
                         <div class="names">
@@ -118,7 +158,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <p>Nuvelar es una solución fácil de utilizar, con una interfaz de usuario, muy simple, intuitiva y atractiva.</p>
+                    <p>Nuvelar es una solución fácil de utilizar, con una interfaz de usuario muy simple, intuitiva y atractiva.</p>
                     <div class="card__footer">
                         <img src="images/GerardoEmanuelli.png" alt="" class="img-user">
                         <div class="names">
@@ -172,6 +212,12 @@
             });
         });
     </script>
+
+            <!-- begin olark code -->
+<script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('7205-502-10-3597');</script>
+<!-- end olark code -->
 
 </body>
 </html>

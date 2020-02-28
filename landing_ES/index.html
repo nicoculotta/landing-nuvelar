@@ -7,21 +7,20 @@
     <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico"/>
     <title>Nuvelar - Landing Page</title>
     <link rel="stylesheet" href="main.css">
+    
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
+
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41919770-3"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
 </head>
 <body>
-
-    <header>
-        <script>
+    <script>
         debugMode = false;
         </script>
 
@@ -32,33 +31,33 @@
               gtag('js', new Date());
 
               gtag('config', 'UA-41919770-3');
+            }else{
+                console.log("En modo debug");
             }
         </script>
-
-        <script>
+          <script>
         function sendlead(){
 
-             if(!debugMode){
-                      gtag('event','form_ar', {
+            if(!debugMode){
+                      gtag('event','form_es', {
                         'event_category': 'lead',
                         'event_label': '<landing>',
                       });
                     }else{
                         console.log("Estoy en modo debug!");
                     }
-
-
              Email.send({
             SecureToken : "c6e7ebeb-9e9e-42b1-84b3-cec96ccea775",
             To : 'contacto@nuvelar.com',
             From : "contacto@nuvelar.com",
-            Subject : "Nuevo Lead - Landing Argentina",
-            Body : "Nuevo lead - Landing Argentina: " + document.getElementById("email").value
+            Subject : "Nuevo Lead - Landing España",
+            Body : "Nuevo lead - Landing España. Email: " + document.getElementById("email").value+", Nombre: "+document.getElementById("name").value
         }).then(
           //message => alert(message)
         );
         }
         </script>
+    <header>
         <nav>
             <img class="brand" src="images/logo.svg" alt="Logo">
             <div class="nav__links">
@@ -66,33 +65,33 @@
                 <a href="#feature">Servicios</a>
                 <a href="#testimonios">Testimonios</a>
             </div>
-            <div class="btn-call"><a href="clkn/tel/%2B54%2011%205984%202697">+54 11 5984 2697</a></div>
+            <div class="btn-call"><a href="callto://+34910603619">+34 910 60 36 19 </a></div>
         </nav>
         <div class="hero__section">
             <div class="hero__titles">
-                <h1>Software para Cartelería Digital Profesional en Argentina</h1>
+                <h1>Software para Cartelería Digital Profesional en España</h1>
+                <p>Nuvelar es el software mas versátil y simple del mercado que se adapta a la medida de tus necesidades para crear las mejores experiencias digitales</p>
             </div>
             <form id="form" method="post">
-                <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
+                <p>Solicita una demo personalizada</p>
+                <input type="text" name="user_name" id="name" placeholder="Name">
+                <input type="email" name="user_email" id="email" placeholder="Email" autocomplete="off">
                 <button id="button" type="submit" class="btn-form" onclick="sendlead()">¡Quiero mi prueba!</button>
             </form>
-
-            <!-- modal -->
-            <div id="popUp" class="modal">
-                <h2 class="title">¡Muchas gracias por comunicarte!</h2>
-                <p class="subtitle">Nuestro equipo se estará contactando a la brevedad</p>
-                <a href="#" rel="modal:close">Volver</a>
-                <a href="https://www.nuvelar.com" target="_blank">Conoce más</a>
-            </div>
-
-            <div class="img-hero">
-                <img src="images/header_landing.svg">
-            </div>
         </div>
+
+        <!-- modal -->
+        <div id="popUp" class="modal">
+            <h2 class="title">¡Muchas gracias por comunicarte!</h2>
+            <p class="subtitle">Nuestro equipo se estará contactando a la brevedad</p>
+            <a href="#" rel="modal:close">Volver</a>
+            <a href="https://www.nuvelar.com" target="_blank">Conoce más</a>
+        </div>	    
+
     </header>
     <section class="clients">
         <p class="clients__title">
-            ¡Sumate a estas empresas que trabajan con nosotros!
+            ¡Sumate a estas empresas que ya confían en nosotros!
         </p>
         <div class="clients__logos">
             <img src="images/provincianet-gris.png" alt="provincianet">
@@ -109,38 +108,38 @@
         <h2 class="title">¿Por qué Nuvelar es el mejor software de cartelería digital?</h2>
         <div class="features__cards">
             <div class="card">
-                <img src="images/screens.svg" alt="" class="img-feature">
+                <img src="images/screens.svg" alt="icon screens" class="img-feature">
                 <h4 class="card__title">Integra tus desarrollos</h4>
                 <p>Comparte la información de tus sistemas en todas tus pantallas</p>
             </div>
             <div class="card active">
-                <img src="images/maps.svg" alt="" class="img-feature">
+                <img src="images/maps.svg" alt="icon maps" class="img-feature">
                 <h4 class="card__title">Programa tus publicaciones</h4>
-                <p>Organizá fácilmente cúando y dónde se mostrarán tus contenidos</p>
+                <p>Organiza fácilmente cúando y dónde se mostrarán tus contenidos</p>
             </div>
             <div class="card">
-                <img src="images/return.svg" alt="" class="img-feature">
-                <h4 class="card__title">Creá y editá contenidos</h4>
+                <img src="images/return.svg" alt="icon_return" class="img-feature">
+                <h4 class="card__title">Crea y edita contenidos</h4>
                 <p>Utiliza el editor de plantillas para crear y editar tus contenidos fácilmente</p>
             </div>
         </div>
     </section>
     <section id="feature">
         <div class="feature__middle">
-            <img src="images/comunicacion.png" alt="" class="img-feature-big">
+            <img src="images/comunicacion.png" class="img-feature-big">
             <div class="feature__info--right">
                 <p class="subtitle">Desarrollo y asesoramiento</p>
                 <h2 class="title">Comunicación interna para empresas</h2>
-                <p>¿Sentís que no llegás al personal de la compañía? Herramientas como el tablero, emails o la intranet, a veces no son suficientes para informar y son poco atractivas para los colaboradores. Nuvelar te permite generar contenidos atractivos, que puedes programar, segmentar y modificar con un solo click.</p>
+                <p>¿Sientes que no llegas al personal de la compañía? Herramientas como el tablero, mails o la intranet, a veces no son suficientes para informar y son poco atractivas para los colaboradores. Nuvelar te permite generar contenidos atractivos, que puedes programar, segmentar y modificar con un solo click.</p>
             </div>
         </div>
         <div class="feature__middle">
             <div class="feature__info--left">
                 <p class="subtitle">Desarrollo y asesoramiento</p>
                 <h2 class="title">Desarrollo de proyectos a medida</h2>
-                <p>Somos el equipo de desarrollo que necesitás para ese proyecto que queres realizar desde hace mucho tiempo. Tenemos una amplia trayectoria y podemos ayudarte a crear soluciones tecnológicas a la medida de tus necesidades.</p>
+                <p>Somos el equipo de desarrollo que necesitas para ese proyecto que quieres realizar desde hace mucho tiempo. Tenemos una amplia trayectoria y podemos ayudarte a crear soluciones tecnológicas a la medida de tus necesidades.</p>
             </div>
-            <img src="images/desarrollo.png" alt="" class="img-feature-big">
+            <img src="images/desarrollo.png" class="img-feature-big">
         </div>
     </section>
     <section id="testimonios" class="testimonios">
@@ -194,7 +193,7 @@
             <div class="contact__wrapper">
                 <img src="images/phone.svg" alt="" class="icon-phone">
                 <div class="info">
-                    <p>+ 54 11 5984 2697</p>
+                    <p>+34 910 60 36 19 </p>
                     <p>Lun a Vie de 9am a 5pm</p>
                 </div>
             </div>
@@ -203,24 +202,22 @@
     </footer>
 
 
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('#form').on('submit',function(e){
-                    e.preventDefault();
-                    $("#popUp").modal({
-                        fadeDuration: 200
-                    });
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#form').on('submit',function(e){
+                e.preventDefault();
+                $("#popUp").modal({
+                    fadeDuration: 200
                 });
             });
+        });
+    </script>
 
-
-        </script>
-
-        <!-- begin olark code -->
+            <!-- begin olark code -->
 <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
 /* custom configuration goes here (www.olark.com/documentation) */
 olark.identify('7205-502-10-3597');</script>
 <!-- end olark code -->
+
 </body>
 </html>
