@@ -7,6 +7,13 @@
     <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico"/>
     <title>Nuvelar - Landing Page</title>
     <link rel="stylesheet" href="main.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
 
@@ -25,13 +32,22 @@
                 <h1>Software para Cartelería Digital Profesional en Chile</h1>
                 <p>Nuvelar es el software mas versátil y simple del mercado que se adapta a la medida de tus necesidades para crear las mejores experiencias digitales</p>
             </div>
-            <div class="form" action="/form" method="get">
+            <form id="form" method="post">
                 <p>Solicita una demo personalizada</p>
                 <input type="text" name="user_name" id="name" placeholder="Name">
                 <input type="email" name="user_email" id="email" placeholder="Email" autocomplete="off">
                 <button type="submit" class="btn-form">¡Quiero mi prueba!</button>
-            </div>
+            </form>
         </div>
+
+        <!-- modal -->
+        <div id="popUp" class="modal">
+            <h2 class="title">¡Muchas gracias por comunicarte!</h2>
+            <p class="subtitle">Nuestro equipo se estará contactando a la brevedad</p>
+            <a href="#" rel="modal:close">Volver</a>
+            <a href="https://www.nuvelar.com" target="_blank">Conoce más</a>
+        </div>	    
+
     </header>
     <section class="clients">
         <p class="clients__title">
@@ -144,6 +160,18 @@
         </div>
         <div class="footer__mini">2020 Nuvelar Inc. - Todos los derechos reservados</div>
     </footer>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#form').on('submit',function(e){
+                e.preventDefault();
+                $("#popUp").modal({
+                    fadeDuration: 200
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -211,7 +211,7 @@ nav .brand {
     line-height: 32px;
 }
 
-.form {
+form {
     width: 40%;
     background-color: #fff;
     padding: 40px;
@@ -224,13 +224,13 @@ nav .brand {
     text-align: center;
 }
 
-.form p {
+form p {
     font-size: var(--f-22);
     line-height: 24px;
     font-weight: 700;
     font-family: 'inter-bold', sans-serif;
 }
-.form input {
+form input {
     border: 1px solid #C9C9C9;
     border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -241,14 +241,14 @@ nav .brand {
     width: 100%;
     color: var(--c-grey)
 }
-.form input:focus {
+form input:focus {
     border: 1px solid var(--c-primary);
 }
 
-.form input:first-of-type {
+form input:first-of-type {
     margin: 30px 0 16px;
 }
-.form input:last-of-type {
+form input:last-of-type {
     margin-bottom: 24px;
 }
 
@@ -256,7 +256,7 @@ nav .brand {
     color: #C9C9C9;
 }
 
-.form button {
+form button {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -281,7 +281,7 @@ nav .brand {
     -o-transition: all .2s ease-in-out;
 }
 
-.form button:hover {
+form button:hover {
     border: 1px solid #39a2f1;
     background-color: #39a2f1;
 }
@@ -628,7 +628,7 @@ section.testimonios {
         line-height: 38px;
     }
 
-    .form {
+    form {
         width: 80%;
     }
 
@@ -707,10 +707,10 @@ section.testimonios {
         display: none;
     }
 
-    .form {
+    form {
         width: 100%;
     }
-    .form p {
+    form p {
         font-size: var(--f-24);
         line-height: 23px;
     }
@@ -736,4 +736,42 @@ section.testimonios {
     .footer__title {
         margin-top: 60px;
     }
+}
+
+
+/* MODAL */
+
+#popUp {
+    padding: 40px;
+    box-shadow: 0px 3px 20px #00000029;
+}
+#popUp p {
+    margin-bottom: 30px;
+}
+
+#popUp a.close-modal {
+    background-image: none;
+    display: none!important;
+}
+
+#popUp a{
+    text-decoration: none;
+    color: var(--c-primary);
+    border: 1px solid transparent;
+    margin-right: 15px;
+    padding: 5px 10px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+#popUp a:hover{
+    color: var(--c-primary);
+    border: 1px solid var(--c-primary);
 }
