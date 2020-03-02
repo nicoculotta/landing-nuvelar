@@ -22,41 +22,41 @@
 <body>
     <script>
         debugMode = false;
-        </script>
+    </script>
 
-        <script>
-            if(!debugMode){
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+    <script>
+        if(!debugMode){
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-              gtag('config', 'UA-41919770-3');
-            }else{
-                console.log("En modo debug");
-            }
-        </script>
-          <script>
+            gtag('config', 'UA-41919770-3');
+        }else{
+            console.log("En modo debug");
+        }
+    </script>
+    <script>
         function sendlead(){
 
             if(!debugMode){
-                      gtag('event','form_es', {
+                        gtag('event','form_es', {
                         'event_category': 'lead',
                         'event_label': '<landing>',
-                      });
+                        });
                     }else{
                         console.log("Estoy en modo debug!");
                     }
-             Email.send({
+                Email.send({
             SecureToken : "c6e7ebeb-9e9e-42b1-84b3-cec96ccea775",
             To : 'contacto@nuvelar.com',
             From : "contacto@nuvelar.com",
             Subject : "Nuevo Lead - Landing España",
             Body : "Nuevo lead - Landing España. Email: " + document.getElementById("email").value+", Nombre: "+document.getElementById("name").value
         }).then(
-          //message => alert(message)
+            //message => alert(message)
         );
         }
-        </script>
+    </script>
     <header>
         <nav>
             <img class="brand" src="images/logo.svg" alt="Logo">
