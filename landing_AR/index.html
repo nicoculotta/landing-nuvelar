@@ -22,7 +22,7 @@
 
     <header>
         <script>
-        debugMode = false;
+            debugMode = false;
         </script>
 
         <script>
@@ -36,28 +36,28 @@
         </script>
 
         <script>
-        function sendlead(){
+            function sendlead(){
 
-             if(!debugMode){
-                      gtag('event','form_ar', {
-                        'event_category': 'lead',
-                        'event_label': '<landing>',
-                      });
-                    }else{
-                        console.log("Estoy en modo debug!");
-                    }
+                if(!debugMode){
+                        gtag('event','form_ar', {
+                            'event_category': 'lead',
+                            'event_label': '<landing>',
+                        });
+                        }else{
+                            console.log("Estoy en modo debug!");
+                        }
 
 
-             Email.send({
-            SecureToken : "c6e7ebeb-9e9e-42b1-84b3-cec96ccea775",
-            To : 'contacto@nuvelar.com',
-            From : "contacto@nuvelar.com",
-            Subject : "Nuevo Lead - Landing Argentina",
-            Body : "Nuevo lead - Landing Argentina: " + document.getElementById("email").value
-        }).then(
-          //message => alert(message)
-        );
-        }
+                Email.send({
+                SecureToken : "c6e7ebeb-9e9e-42b1-84b3-cec96ccea775",
+                To : 'contacto@nuvelar.com',
+                From : "contacto@nuvelar.com",
+                Subject : "Nuevo Lead - Landing Argentina",
+                Body : "Nuevo lead - Landing Argentina: " + document.getElementById("email").value
+            }).then(
+            //message => alert(message)
+            );
+            }
         </script>
         <nav>
             <img class="brand" src="images/logo.svg" alt="Logo">
