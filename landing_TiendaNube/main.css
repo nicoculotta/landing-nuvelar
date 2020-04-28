@@ -1,0 +1,141 @@
+/* ROOT variables */
+:root {
+
+    /* color variables */
+    --c-titles: #212121;
+    --c-text: #848484;
+    --c-accent: #f84b6e;
+    --c-gradient: transparent linear-gradient(180deg, #f84b6e 0%, #ff7d68 100%) 0% 0% no-repeat;
+    /* font variables */
+    --f-text: 1em;
+    --f-text-big: 1.25em;
+    --f-title-semi: 2em;
+    --f-title-big: 2.625em;
+    --f-title-hero: 3.5em;
+    --f-subtitle-hero: 1.5em;
+    /* helpers */
+    --wrapper: 62.5em;
+}
+
+/* FONTS */
+@font-face {
+    font-family: inter-regular;
+    src: url(fonts/Inter-Regular.otf);
+    font-weight: 400;
+  }
+@font-face {
+    font-family: inter-semibold;
+    src: url(fonts/Inter-SemiBold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: inter-bold;
+    src: url(fonts/Inter-Bold.otf);
+    font-weight: 700;
+}
+
+
+/* RESET CSS */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* MAIN CSS CLASSES */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    color: var(--c-primary);
+    font-family: 'inter-regular', sans-serif;
+}
+
+/* 1920px width */
+header {
+    width: 100%;
+}
+
+
+/* HERO SECTION */
+
+
+
+/* SECTION CLIENTS */
