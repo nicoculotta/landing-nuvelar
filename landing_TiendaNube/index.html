@@ -15,6 +15,40 @@
     
 </head>
 <body>
+    <script>
+
+   
+    function saveLead(){
+
+         var url = new URL(window.location.href);
+         console.log(window.location.href);
+
+         listId = "61"
+         var c = url.searchParams.get("listId");
+         if(c!=null){
+            listId = c
+         }
+
+    
+        email = document.getElementById("email").value;
+        tel = document.getElementById("Tel").value;
+        console.log(tel);
+        
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function() {
+          if(this.readyState === 4) {
+            console.log(this.responseText);
+          }
+        });
+
+
+        xhr.open("POST", "https://jmbgwi40c8.execute-api.us-east-1.amazonaws.com/AddLeadECommerceLandingV1?email=" + email+"&tel="+tel+"&listId=" +  listId);
+
+        xhr.send();
+    }
+    </script>
     <div class="remodal-bg">
 
         <div class="offer">
@@ -149,7 +183,7 @@
                 <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
                 <input type="Tel" name="Tel" id="Tel" placeholder="Teléfono" autocomplete="off" required>
                 <button data-remodal-action="cancel" class="button button--secondary">Volver</button>
-                <button data-remodal-action="confirm" type="submit" class="button button--primary">Enviar</button>
+                <button onclick='saveLead()' data-remodal-action="confirm" type="submit" class="button button--primary">Enviar</button>
             </form>
         </div>
     <!-- END MODAL -->
