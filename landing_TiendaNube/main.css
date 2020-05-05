@@ -693,6 +693,14 @@ form input {
   margin-bottom: 20px;
 }
 
-form input:focus {
-  border: 1px solid var(--c-accent);
+#error-validate {
+  color: var(--c-accent);
+  margin: 0px 0 10px;
+}
+.display-none {
+  display: none;
+}
+
+form input.error {
+  border-color: var(--c-accent);
 }
