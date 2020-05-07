@@ -580,6 +580,7 @@ header .rect {
   .hero__contentImage {
     top: 481px;
     width: 500px;
+    z-index: -1;
   }
 
   .image__container {
